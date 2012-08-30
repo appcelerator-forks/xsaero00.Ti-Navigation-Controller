@@ -5,6 +5,6 @@ This is my version of the Cross-Platform NavigationController written by
 Kevin Whinnery 
 https://githubi.com/kwhinnery/NavigationController
 
-This version uses events to manipulate window stack. This insures sequential window closing and opening. Kevin's version was causing an unexpected shutdow of the app when invoking home() function on a stack of 3+ windows. The windows were closed all at the same time not sequentially.
+This version uses events to manipulate window stack. This insures sequential window closing and opening. Kevin's version was causing an unexpected shutdown of the app when invoking home() function on a stack of 3+ windows. The windows were closed all at the same time, not sequentially.
 
-In addition I added new method openFromHome(). It allows opening new windows from the 'root' window. I believe this method is very useful for 'dashboard' applications. 
+In addition, I created new method openFromHome(). It allows opening new windows from the 'root' window. I believe this method is very useful for 'dashboard' applications. 
