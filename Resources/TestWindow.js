@@ -1,6 +1,6 @@
-TestWindow = function(navController) {
+exports.TestWindow = TestWindow = function(navController) {
 	var win = Ti.UI.createWindow({
-		title:'Window '+ navController.windowStack.length,
+		title:'Window '+navController.windowStack.length,
 		backgroundColor:'#fff',
 		layout:'vertical'
 	});
@@ -26,8 +26,17 @@ TestWindow = function(navController) {
 		navController.home();
 	});
 	win.add(home);
+	
+	var addfh = Ti.UI.createButton({
+		title:'Open New From Home',
+		height:'50dp',
+		width:'200dp',
+		top:'20dp'
+	});
+	addfh.addEventListener('click', function() {
+		navController.openFromHome(new TestWindow(navController));
+	});
+	win.add(addfh);
 
 	return win;
 };
-
-module.exports = TestWindow;
